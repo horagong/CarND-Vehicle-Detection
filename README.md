@@ -63,11 +63,11 @@ I trained a linear SVM using hog parameters above and color histgram of 16 but n
 
 I decided to search over the images with three different scaled window. I changed the window size with respect to the height position of the window like this image.
 
-| Height    | scale |
-|:---------:|:-----:|
-| 380 ~ 500 | 1.0   |
-| 400 ~ 650 | 1.4   |
-| 450 ~ 680 | 2.5   |
+| Height    | scale | overlap |
+|:---------:|:-----:|:-------:|
+| 380 ~ 500 | 1.0   | 75%     |
+| 400 ~ 650 | 1.4   | 75%     |
+| 450 ~ 680 | 2.5   | 75%     |
 
 
 
