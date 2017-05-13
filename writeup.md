@@ -28,7 +28,7 @@ The goals / steps of this project are the following:
 ---
 ### Writeup / README
 
-####1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  [Here](https://github.com/udacity/CarND-Vehicle-Detection/blob/master/writeup_template.md) is a template writeup for this project you can use as a guide and a starting point.  
+#### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one.  You can submit your writeup as markdown or pdf.  [Here](https://github.com/udacity/CarND-Vehicle-Detection/blob/master/writeup_template.md) is a template writeup for this project you can use as a guide and a starting point.  
 
 You're reading it!
 
@@ -53,7 +53,7 @@ Here is an example using the `gray` color space and HOG parameters of `orientati
 
 I tried various combinations of parameters like cell_per_block, pix_per_cell, orient, hog_channel. Finally I chose orient=15 and cell_per_block=2, pix_per_cell=8, hog_channel='ALL', colorspace='YUV' considering accuray and computation speed.
 
-####3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
+#### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
 I trained a linear SVM using hog parameters above and color histgram of 16 but no spatial binning. I thought spatial binning had no big effect on the test video result because the cars had so many different colors.
 
@@ -62,6 +62,7 @@ I trained a linear SVM using hog parameters above and color histgram of 16 but n
 #### 1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
 
 I decided to search over the images with three different scaled window. I changed the window size with respect to the height position of the window like this image.
+
 | Height    | scale |
 |:---------:|:-----:|
 | 380 ~ 500 | 1.0   |
