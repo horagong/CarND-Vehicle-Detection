@@ -108,6 +108,16 @@ But it needed some more computation time. So I decided to use just one heatmap a
 
 I accumulated five frames to a queue and applied thresold on sum of heats in the queue using threshold_on_heat() in the 11th code cell and then recorded the positions of positive detections in each frame of the video.
 
+```python
+heats = collections.deque(maxlen=5)
+...
+heats.append(heat)
+heats_sum = sum(heats)
+heats_sum = apply_threshold(heats_sum, threshold)   
+heatmap = np.clip(heats_sum, 0, 255)
+labels = label(heatmap)
+```
+
 
 ---
 
